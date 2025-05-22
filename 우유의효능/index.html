@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script type="module">
+        import { fairyDustCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+      
+        new fairyDustCursor();
+      </script>
+    <meta charset="UTF-8">
+    <title>우유의 효능</title>
+    <style>
+        body {
+            margin: 0; padding: 0; background: #000; color: #fff;
+            cursor: url('image1.png') 16 16, auto;
+        }
+        
+        .image-container {
+            position: relative;
+            width: 1000px;    /* 원하는 고정값으로 */
+            height: 600px;    /* 원하는 고정값으로 */
+            margin: 0 auto;  /* 위 60px 띄우고 중앙정렬 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+        }
+        .image-container img {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;          /* 또는 width: 100%; height: 100%; */
+            height: auto;
+            object-fit: contain;
+            transition: all 0.3s ease;
+        }
+        .image-container img.umma-img {
+            z-index: 2;
+            box-sizing: border-box;
+        }
+        .image-container img.umma-img:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+            cursor: url('image1.png') 16 16, auto;
+        }
+        .title-text {
+            color: #f42d2d;
+            font-size: 3rem;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="title-text">Story of Milk 우유의 효능</div>
+    <div class="image-container">
+        <img src="ummabg.png">
+        <img src="umma.png" class="umma-img">
+        <img src="post.png" style="position: absolute; left: 60px; top: 60px; width: 200px;">
+    </div>
+</body>
+</html>
+<footer>
+    
+</footer>
